@@ -1,5 +1,7 @@
 # Descrição do Diagrama de Sequência – APIs Fase 3
 
+![](/images/diagram.jpeg)
+
 ## Detalhamento da iniciação de pagamento:
 
 1.  Debtor (Usuário) inicia o processo de pagamento na iniciadora.
