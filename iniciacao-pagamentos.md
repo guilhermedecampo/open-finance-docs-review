@@ -1,8 +1,8 @@
 # Iniciação de pagamentos
 
-Na fase 3 do Open Finance Brasil será oferecida aos clientes a possibilidade de movimentação financeira a partir de aplicativos e plataformas externas ao ambiente no qual mantém sua conta.
+Na fase 3 do Open Finance Brasil é oferecida aos clientes a possibilidade de movimentação financeira a partir de aplicativos e plataformas externas ao ambiente no qual mantém sua conta.
 
-Na prática o que teremos é a oferta de pagamentos, transferências e outras operações executadas a partir de aplicativos de terceiros, sempre com a prévia coleta do consentimento do cliente para a iniciação destas transações.
+Na prática é a oferta de pagamentos, transferências e outras operações executadas a partir de aplicativos de terceiros, sempre com a prévia coleta do consentimento do cliente para a iniciação destas transações.
 
 No âmbito da [Resolução conjunta nº 1](https://www.in.gov.br/en/web/dou/-/resolucao-conjunta-n-1-de-4-de-maio-de-2020-255165055 "https://www.in.gov.br/en/web/dou/-/resolucao-conjunta-n-1-de-4-de-maio-de-2020-255165055"), de 04 de maio de 2020 o Open Finance Brasil passa a contar com os atores e operações ali definidos, reproduzidos a seguir.
 
@@ -24,14 +24,20 @@ De forma análoga ao caso das detentoras de conta, as iniciadoras mantém certo 
 
 É o serviço que possibilita a iniciação da instrução de uma transação de pagamento, ordenado pelo cliente, relativamente a uma conta de depósitos à vista (conta-corrente), conta-salário, conta de poupança ou conta de pagamento pré-paga.
 
-Inicialmente o Open Finance estará disponibilizando a iniciação de Pix com execução na data corrente.
+O Open Finance disponibiliza a iniciação de Pix com execução na data corrente e agendamento. 
 
-Futuramente com a evolução do ecossistema novas modalidades de operações serão agregadas, assim como a possibilidade de agendamentos.
+Futuramente com a evolução do ecossistema novas modalidades de operações serão agregadas, como pagamentos recorrentes e recorrentes variáveis.
 
 ## Iniciação pelo Recebedor
 
-Iniciação pelo recebedor ocorre quando a prestação de serviço pela iniciadora é para, e somente para, o recebedor. Nestes casos somente será permitido como beneficiário do pagamento o próprio recebedor. Algumas Instituições Detentoras de conta precisarão ajustar seus sistemas de forma a apropriar o campo em sua estrutura ao invés de gerá-lo nos casos pertinentes.
+Iniciação pelo recebedor ocorre quando a prestação de serviço pela iniciadora é para, e somente para, o recebedor. Nestes casos somente será permitido como beneficiário do pagamento o próprio recebedor. 
+
+Um novo localInstrument foi criado para esse fim e tem o nome de INIC. Deve-se levar em conta que o INIC usa o DICT para validar a chave Pix enviada na requisição.
 
 ## Informações gerais
 
 O QR Code estático deve ser validado nos dados que o compõe. Em particular, não existindo valor financeiro, a transação assume o valor do consentimento, que será objeto de autorização posterior pelo cliente.
+
+Para realizar um agendamento deve-se utilizar o campo 'payment.schedule' no consentimento e não enviar o date, isto é, são mutualmente excludentes.
+
+O cancelamento deve ser realizado apenas nas seguintes situações: Agendada com sucesso (SCHD), retida para análise (PDNG) ou aguardando autorização de múltiplas alçadas (PATC).
