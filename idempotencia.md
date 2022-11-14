@@ -4,26 +4,26 @@ Segundo a W3C, "um método HTTP idempotente é um método HTTP que pode ser cham
 
 Os conhecidos métodos GET, PUT e DELETE são naturalmente idempotentes, assim como HEAD, OPTIONS e TRACE também são.
 
-Porém, o método POST requer um tratamento especial para que se torne idempotente e, por estarmos tratando aqui de meios de pagamentos, fazer esse tratamento é algo desejável para que não ocorram acidentes.
+Porém, o método POST e PATCH requer um tratamento especial para que se torne idempotente e, por estarmos tratando aqui de meios de pagamentos, fazer esse tratamento é algo necessário para que não ocorram acidentes.
 
-## Por que é necessário tratarmos a Idempotência do POST?
+## Por que é necessário tratarmos a Idempotência do POST/PATCH?
 
-Imagine que seja realizado um POST de pagamento e, depois de alguns segundos, é retornada uma mensagem de Timeout. Nesse caso, não é possível saber se o POST foi efetivo e enviar o POST novamente, sem tratar a idempotência, poderá ocasionar em duplicidade de pagamento.
+Imagine que seja realizado um POST/PATCH no pagamento e, depois de alguns segundos, é retornada uma mensagem de Timeout. Nesse caso, não é possível saber se o POST/PATCH foi efetivo e enviar o POST/PATCH novamente, sem tratar a idempotência, poderá ocasionar em duplicidade da operação.
 
 ## Como mitigarmos esse risco?
 
-Do lado da iniciadora do pagamento: É necessário que seja enviado o POST com um GUID de Idempotência. Caso o mesmo POST seja reenviado por acidente ou precise ser reenviado, por qualquer motivo que seja, basta reenviar o POST com o mesmo GUID de Idempotência.
+Do lado da iniciadora do pagamento: É necessário que seja enviado o POST/PATCH com um GUID de Idempotência. Caso o mesmo POST/PATCH seja reenviado por acidente ou precise ser reenviado, por qualquer motivo que seja, basta reenviar o POST/PATCH com o mesmo GUID de Idempotência.
 
-Do lado da detentora da conta: É necessário validar o GUID de Idempotência recebido. Caso tenha recebido o mesmo GUID de Idempotência, a nova mensagem de POST deverá ser descartada.
+Do lado da detentora da conta: É necessário validar o GUID de Idempotência recebido. Caso tenha recebido o mesmo GUID de Idempotência, a nova mensagem de POST/PATCH deverá ser descartada.
 
-Importante reforçar que cada nova transação com POST deverá ter um novo GUID de Idempotência.
+Importante reforçar que cada nova operação com POST/PATCH deverá ter um novo GUID de Idempotência.
 
-A iniciadora não deve usar comportamento idempotente do POST para pesquisar o status dos recursos.
+A iniciadora não deve usar comportamento idempotente do POST/PATCH para pesquisar o status dos recursos.
 
 ## Conjunto inicial de regras propostas na aplicação da idempotencia:
 
 * A iniciadora/TPP não deve alterar o corpo da solicitação ao usar a mesma chave de idempotência. Se a iniciadora alterar o corpo da solicitação, a detentora/ASPSP não deve modificar o recurso final. A detentora pode tratar este caso como uma ação fraudulenta;
-* A detentora não deve criar um novo recurso para uma solicitação POST se estiver determinada como uma solicitação idempotente;
+* A detentora não deve criar um novo recurso para uma solicitação POST/PATCH se estiver determinada como uma solicitação idempotente;
 * Na criação a detentora deve responder à solicitação com o status atual do recurso (ou um status que seja pelo menos tão atual quanto o que estiver disponível nos canais eletrônicos existentes) e um código de status HTTP 201 (CREATED);
 * A iniciadora não deve usar comportamento idempotente para pesquisar o status dos recursos;
 * A detentora pode usar a assinatura da mensagem, junto com a chave de idempotência, para garantir que o corpo da solicitação não seja alterado;
