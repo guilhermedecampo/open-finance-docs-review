@@ -4,7 +4,7 @@ Segundo a W3C, "um método HTTP idempotente é um método HTTP que pode ser cham
 
 Os conhecidos métodos GET, PUT e DELETE são naturalmente idempotentes, assim como HEAD, OPTIONS e TRACE também são.
 
-Porém, o método POST requer um tratamento especial para que se torne idempotente e, por estarmos tratando aqui de meios de pagamentos, fazer esse tratamento é algo desejável para que não ocorram acidentes.
+Porém, o método POST requer um tratamento especial para que se torne idempotente e, por estarmos tratando aqui de meios de pagamentos, fazer esse tratamento é algo necessário para que não ocorram acidentes.
 
 ## Por que é necessário tratarmos a Idempotência do POST?
 
