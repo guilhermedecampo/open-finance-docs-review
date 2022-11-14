@@ -11,5 +11,5 @@ Reviewing pages below:
 - [ ] [Polling e controle de acesso](/polling-e-acesso.md)
 - [x] [Assinar payload](/assinar-payload.md)
 - [ ] [Assinatura mensagem vs Idempotencia](/assinatura-msg-vs-idempotencia.md)
-- [ ] [Validação DICT](/validacoes-de-info-dict.md)
+- [x] [Validação DICT](/validacoes-de-info-dict.md)
 - [ ] [SWAGGER](/swagger-2_0.yaml)
