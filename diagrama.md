@@ -7,67 +7,6 @@
 1.  Debtor (Usuário) inicia o processo de pagamento na iniciadora.
     
 2.  Na iniciadora, o debtor seleciona a detentora e os dados de pagamentos: **Observação**: não serão ofertados, no primeiro momento, **Pix Saque e Pix troco**. Também não será possível agendamentos para **Pix QR Codes Dinâmico com vencimento**. [Aqui referências a regulamentação relacionada ao Pix](https://www.bcb.gov.br/estabilidadefinanceira/pix?modalAberto=regulamentacao_pix "https://www.bcb.gov.br/estabilidadefinanceira/pix?modalAberto=regulamentacao_pix").
-    
-    1.  Se a transação for por "Chave Pix", "Iniciação pelo Recebedor" ou "QR Code Estático":
-        
-        1.  É realizada consulta ao DICT (diretório de contas).  
-            **Observação**: se a Iniciadora for um participante direto, detentora ou não de conta, no ecossistema do Pix, ele fará a consulta de forma direta ao DICT. Se a iniciadora for um participante indireto, será necessário consulta por meio de uma instituição com acesso direto com a qual a iniciadora possua relacionamento.
-            
-        2.  A iniciadora recebe as informações consultadas:
-            
-            1.  Dados da conta
-                
-            2.  Nome do creditor
-                
-            3.  Instituição detentora da conta do creditor (ISPB)
-                
-            4.  CPF / CPNJ do creditor
-                
-    2.  Se a transação for por "QR Code Dinâmico":
-        
-        1.  É realizada consulta dos dados do QR code do creditor:
-            
-            1.  CNPJ / CPF
-                
-            2.  Data de vencimento
-                
-            3.  Nome Instituição
-                
-            4.  Endereço (logradouro, cidade, UF e CEP)
-                
-            5.  Identificador (txId)
-                
-            6.  Chave Pix
-                
-            7.  Valor Original
-                
-            8.  Valor Final
-                
-            9.  Vencimento
-                
-            10.  Expiração
-            
-        2. E depois deve-se realizar a consulta ao DICT pela chave Pix recebida na consulta do QR code do creditor.
-                
-    3.  Se a transação for por "dados manuais" (agência e conta):
-        
-        1.  Insere-se dados:
-            
-            1.  Instituição financeira (ISPB)
-                
-            2.  Agência
-                
-            3.  Conta
-                
-            4.  Nome
-                
-            5.  CPF / CNPJ
-
-            6.  Tipo de conta
-                
-        2.  **Observação**: não é realizada nenhum tipo de consulta: QR Code ou DICT.
-            
-3.  Após consultas, a iniciadora segue para o fluxo de autorização e consentimento.
 
 #### Estabelece TLS
 
