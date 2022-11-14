@@ -1,8 +1,8 @@
 # Visão geral
 
-A API tem como objetivo coletar o consentimento e realizar a iniciação de pagamento entre bancos e instituições financeiras e acessível também à estabelecimentos comerciais participantes do Open Finance Brasil.
+A API tem como objetivo coletar o consentimento e realizar a iniciação de pagamento entre bancos, instituições financeiras e é acessível também à estabelecimentos comerciais participantes do Open Finance Brasil.
 
-Os recursos estão disponíveis para pagadores que possuem vínculo com uma instituição detentora de conta participante do Open Finance, independentemente de serem pessoa física ou jurídica.
+Os recursos estão disponíveis para pagadores que possuem registro em uma instituição detentora de conta participante do Open Finance, independentemente de serem pessoa física ou jurídica.
 
 ## Criar consentimento para iniciação de pagamento : (POST /payments/v2/consents)
 
