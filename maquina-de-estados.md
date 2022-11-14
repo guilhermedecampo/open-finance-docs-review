@@ -80,7 +80,7 @@ Abaixo segue a descrição dos status relacionados a máquina de estados pertine
 
 - O status indica que a transação foi rejeitada pela detentora ou pelo SPI.
 
-### ACSC (Accepted Settlement Completed Debitor Account)
+### ACSC (Accepted Settlement Completed Debtor Account)
 
 - O status indica que a transação foi efetivada pela detentora ou pelo SPI.
 
