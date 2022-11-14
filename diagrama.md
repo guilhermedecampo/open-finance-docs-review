@@ -58,6 +58,6 @@ Durante o período de polling a Iniciadora deverá consultar o status da transa
 
 #### Exibe comprovante de iniciação de pagamento
 
-Caso a Iniciadora identifique que a transação de pagamento foi aprovada pela Detentora de Conta (status “ACCC”), poderá ser exibido o comprovante da **efetivação** da Transação de Pagamento. Caso o status do pagamento seja diferente de “ACCC” e/ou “RJCT”, deverá ser apresentada a efetivação da **solicitação** de Iniciação de Pagamento, apresentando as informações [segundo Guia de Usuário TPP](https://openfinancebrasil.atlassian.net/wiki/spaces/DraftOF/pages/7997165/Guia+do+Usu+rio "https://openfinancebrasil.atlassian.net/wiki/spaces/DraftOF/pages/7997165/Guia+do+Usu+rio").
+Caso a Iniciadora identifique que a transação de pagamento foi aprovada pela Detentora de Conta, poderá ser exibido o comprovante da **efetivação** da Transação de Pagamento. Caso o status do pagamento seja diferente de aprovado ou rejeitado, deverá ser apresentada a efetivação da **solicitação** de Iniciação de Pagamento, apresentando as informações [segundo Guia de Usuário](https://openfinancebrasil.atlassian.net/wiki/spaces/DraftOF/pages/7997165/Guia+do+Usu+rio "https://openfinancebrasil.atlassian.net/wiki/spaces/DraftOF/pages/7997165/Guia+do+Usu+rio").
 
 Os possíveis status de uma transação de iniciação de pagamento estão detalhados na documentação (Open Finance Brasil).
