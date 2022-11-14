@@ -4,6 +4,7 @@ Repository of docs pages, easy to compare changes on pull requests.
 
 Reviewing pages below:
 
+- [x] [Iniciação de Pagamento](/iniciacao-pagamentos.md)
 - [x] [Visão Geral](/visao-geral.md)
 - [x] [Idempotência](/idempotencia.md)
 - [x] [Diagrama](/diagrama.md)
