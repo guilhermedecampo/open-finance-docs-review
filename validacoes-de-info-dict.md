@@ -17,7 +17,7 @@ Neste cenário o pagamento é criado com sucesso e o consentimento é consumido,
 
 **Primeira requisição: Retorno da API POST /pix/payments:**
 
-- Sucesso HTTP 201 e status de pagamento PDNG ou PATC.
+- Sucesso HTTP 201 e status de pagamento RCVD.
 
 **Segunda requisição: Retorno da API GET /pix/payments/{paymentId}**
 
