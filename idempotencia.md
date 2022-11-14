@@ -8,7 +8,7 @@ Porém, o método POST e PATCH requer um tratamento especial para que se torne i
 
 ## Por que é necessário tratarmos a Idempotência do POST/PATCH?
 
-Imagine que seja realizado um POST/PATCH de pagamento e, depois de alguns segundos, é retornada uma mensagem de Timeout. Nesse caso, não é possível saber se o POST/PATCH foi efetivo e enviar o POST/PATCH novamente, sem tratar a idempotência, poderá ocasionar em duplicidade de pagamento.
+Imagine que seja realizado um POST/PATCH no pagamento e, depois de alguns segundos, é retornada uma mensagem de Timeout. Nesse caso, não é possível saber se o POST/PATCH foi efetivo e enviar o POST/PATCH novamente, sem tratar a idempotência, poderá ocasionar em duplicidade da operação.
 
 ## Como mitigarmos esse risco?
 
@@ -16,7 +16,7 @@ Do lado da iniciadora do pagamento: É necessário que seja enviado o POST/PATCH
 
 Do lado da detentora da conta: É necessário validar o GUID de Idempotência recebido. Caso tenha recebido o mesmo GUID de Idempotência, a nova mensagem de POST/PATCH deverá ser descartada.
 
-Importante reforçar que cada nova transação com POST/PATCH deverá ter um novo GUID de Idempotência.
+Importante reforçar que cada nova operação com POST/PATCH deverá ter um novo GUID de Idempotência.
 
 A iniciadora não deve usar comportamento idempotente do POST/PATCH para pesquisar o status dos recursos.
 
