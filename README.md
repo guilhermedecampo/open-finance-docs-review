@@ -9,7 +9,7 @@ Reviewing pages below:
 - [x] [Idempotência](/idempotencia.md)
 - [x] [Diagrama](/diagrama.md)
 - [x] [Máquina de estados](/maquina-de-estados.md)
-- [ ] [Polling e controle de acesso](/polling-e-acesso.md)
+- [x] [Polling e controle de acesso](/polling-e-acesso.md)
 - [x] [Assinar payload](/assinar-payload.md)
 - [x] [Assinatura mensagem vs Idempotencia](/assinatura-msg-vs-idempotencia.md)
 - [x] [Validação DICT](/validacoes-de-info-dict.md)
