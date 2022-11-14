@@ -10,6 +10,6 @@ Reviewing pages below:
 - [x] [Máquina de estados](/maquina-de-estados.md)
 - [ ] [Polling e controle de acesso](/polling-e-acesso.md)
 - [x] [Assinar payload](/assinar-payload.md)
-- [ ] [Assinatura mensagem vs Idempotencia](/assinatura-msg-vs-idempotencia.md)
+- [x] [Assinatura mensagem vs Idempotencia](/assinatura-msg-vs-idempotencia.md)
 - [x] [Validação DICT](/validacoes-de-info-dict.md)
 - [ ] [SWAGGER](/swagger-2_0.yaml)
