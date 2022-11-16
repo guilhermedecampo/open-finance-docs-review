@@ -1,4 +1,4 @@
-# Descrição do Diagrama de Sequência – APIs Fase 3
+# Descrição do Diagrama de Sequência
 
 ![](/images/diagram.jpeg)
 
@@ -42,7 +42,7 @@ No caso do consentimento ter sido criado com sucesso, a Instituição Iniciadora
 
 #### Validações de negócios (Detentora)
 
-Ao receber `POST /payments/<version>/consents` ou `POST /payments/<version>/pix/payments` é importante observar que a Detentora deverá validar as informações passadas pela Iniciadora nos campos do payload de envio do consentimento e do pagamento (como, por exemplo, valores e dados do creditado), além de caso veja necessidade, decodificar o payload para validar outras informações (atenção para a PACS008 e as [regulamentações do Pix](https://www.bcb.gov.br/estabilidadefinanceira/pix?modalAberto=regulamentacao_pix "https://www.bcb.gov.br/estabilidadefinanceira/pix?modalAberto=regulamentacao_pix")). A Detentora deve validar as informações de detalhes do payload com os dados de detalhes do consentimento, de acordo com a forma de pagamento. Caso os dados do detalhe informados no consentimento sejam diferente dos dados enviados na iniciação de pagamento, a Detentora de retornar erro HTTP 422 Unprocessable Entity, com o code BENEFICIARIO\_INCOMPATIVEL.
+Ao receber `POST /payments/<version>/consents` ou `POST /payments/<version>/pix/payments` é importante observar que a Detentora deverá validar as informações passadas pela Iniciadora nos campos do payload de envio do consentimento e do pagamento (como, por exemplo, valores e dados do creditado), além de caso veja necessidade, decodificar o payload para validar outras informações (atenção para a PACS008 e as [regulamentações do Pix](https://www.bcb.gov.br/estabilidadefinanceira/pix?modalAberto=regulamentacao_pix "https://www.bcb.gov.br/estabilidadefinanceira/pix?modalAberto=regulamentacao_pix")). A Detentora deve validar as informações de detalhes do payload com os dados de detalhes do consentimento, de acordo com a forma de pagamento. Caso os dados do detalhe informados no consentimento sejam diferente dos dados enviados na iniciação de pagamento, a Detentora deve retornar erro HTTP 422 Unprocessable Entity, com o code BENEFICIARIO\_INCOMPATIVEL.
 
 #### Efetivação do pagamento<<Async>>
 
