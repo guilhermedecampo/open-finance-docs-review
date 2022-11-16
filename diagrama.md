@@ -10,11 +10,11 @@
 
 #### Estabelece TLS
 
-Toda comunicação máquina-a-máquina (m2m) usará mTLS, conforme RFC rfc8705 e detalhado na especificação de segurança: [Open Finance Brasil Financial-grade API Security Profile 1.0 Implementers Draft 3](https://openbanking-brasil.github.io/specs-seguranca/open-banking-brasil-financial-api-1_ID3.html "https://openbanking-brasil.github.io/specs-seguranca/open-banking-brasil-financial-api-1_ID3.html").
+Toda comunicação máquina-a-máquina (m2m) usará mTLS, conforme RFC 8705 e detalhado na especificação de segurança: [Open Finance Brasil Financial-grade API Security Profile 1.0 Implementers Draft 3](https://openbanking-brasil.github.io/specs-seguranca/open-banking-brasil-financial-api-1_ID3.html "https://openbanking-brasil.github.io/specs-seguranca/open-banking-brasil-financial-api-1_ID3.html").
 
 #### POST /tokens - Pedido de access\_token e scope: payments, openid
 
-Antes de começar o fluxo de iniciação de pagamento, a Instituição Iniciadora deverá ter se cadastrado como _client_ na Instituição Detentora da Conta, em acordo com o especificado para o Registro Dinâmico de Clientes (Dynamic Client Registration). Os detalhes dessa etapa podem ser encontrados na especificação de segurança:  [Open Finance Brasil Financial-grade API Dynamic Client Registration 1.0 Implementers Draft 2](https://openbanking-brasil.github.io/specs-seguranca/open-banking-brasil-dynamic-client-registration-1_ID2.html "https://openbanking-brasil.github.io/specs-seguranca/open-banking-brasil-dynamic-client-registration-1_ID2.html"). Uma vez cadastrada, a Instituição Iniciadora deverá obter o token de acesso (_access\_token_) pelo fluxo de _client credentials_, conforme especificado pela RFC 6749 (rfc6749), com os escopos _payments_ e _openid_.
+Antes de começar o fluxo de iniciação de pagamento, a Instituição Iniciadora deverá ter se cadastrado como _client_ na Instituição Detentora da Conta, em acordo com o especificado para o Registro Dinâmico de Clientes (Dynamic Client Registration). Os detalhes dessa etapa podem ser encontrados na especificação de segurança:  [Open Finance Brasil Financial-grade API Dynamic Client Registration 1.0 Implementers Draft 2](https://openbanking-brasil.github.io/specs-seguranca/open-banking-brasil-dynamic-client-registration-1_ID2.html "https://openbanking-brasil.github.io/specs-seguranca/open-banking-brasil-dynamic-client-registration-1_ID2.html"). Uma vez cadastrada, a Instituição Iniciadora deverá obter o token de acesso (_access\_token_) pelo fluxo de _client credentials_, conforme especificado pela RFC 6749, com os escopos _payments_ e _openid_.
 
 #### Valida certificado SSL e scopes
 
