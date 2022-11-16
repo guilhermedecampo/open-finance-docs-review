@@ -36,7 +36,7 @@ O tempo do expirationDateTime é garantido com os 15 minutos do access token, se
 
 ## Recomendação uso de polling
 
-A consulta via GET, para verificar o processamento da transação, pode ser efetuada a qualquer momento desde que se respeite o rate limit definido na na página Recomendação Uso de Polling e Controle de Acesso (link).
+A consulta via GET, para verificar o processamento da transação, pode ser efetuada a qualquer momento desde que se respeite o rate limit definido na página [Recomendação Uso de Polling e Controle de Acesso](/polling-e-acesso.md).
 
 ## Pagamento: Arranjo Pix
 
